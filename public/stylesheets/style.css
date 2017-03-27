@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Enriqueta');
+
+html,
+body {
+    font-family:  'Enriqueta', serif !important;
+    text-transform: uppercase !important;
+    height: 100%;
+    color: #000000 !important;
+}
+html{
+    background: linear-gradient(#ad2929 75%, #2a2a2a 25%);
+    background-repeat: no-repeat;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  max-width: 768px;
+  margin: 5% auto!important;
+  border-radius: 5px;
+  max-height: 80%;
+}
+
+h1{
+  font-family: 'Cinzel', serif !important;
+}
+header{
+  height: 200px;
+  background-image: url('/images/muskokaBanner.png');
+  text-align: center;
+}
+a {
+  color: #00B7FF;
+}
+.block{
+  display: inline-block;
+  width: 100%;
+      margin: 5% 0;
+}
+a.nav-link.active {
+    border: 2px solid #efefef;
+    background: #efefef;
+  }
+
+
+
+.btn{
+  margin: 10px;
+  background: #0266ff !important;
+}
+
+.btn:hover{
+  background: #c0c0c0 !important;
+  color: #285796 !important;
+ }
+
+ .btn:active{
+   background: #ad2929 !important;
+   color: #41687b !important;
+ }
