@@ -5,12 +5,8 @@ var router = express.Router();
 // reference this model for CRUDNESS
 let Camper = require('../models/camper');
 
-// // staff camper profiles
-// router.get('/staff-camper-profiles', function(req, res, next){
-//    res.render('staff-camper-profiles', { title:'Camper Profiles'});
-//  });
 
-/* GET profile page. */
+/* GET staff-camper-profiles page. */
 router.get('/staff-camper-profiles', function(req, res, next) {
 
     Camper.find(function(err, queryResults){
@@ -70,9 +66,31 @@ router.post('/add-camper', function(req, res, next) {
             res.render('error');
             return;
         }
-        res.redirect('staff-camper-registration');
+        res.redirect('camp-detail');
     });
 });
+
+
+
+/* GET camp-detail page. */
+router.get('/camp-detail', function(req, res, next) {
+
+    Camper.find(function(err, queryResults){
+        if (err){
+            console.log(err);
+            res.end(err);
+            return;
+        }
+        else{
+            console.log(queryResults);
+            res.render('camp-detail', {
+                Camper: queryResults,
+                title:'Camp detail'
+            });
+        }
+    });
+});
+
 
 
 // make public

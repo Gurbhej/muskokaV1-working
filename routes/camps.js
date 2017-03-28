@@ -3,6 +3,7 @@ var router = express.Router();
 // reference this model for CRUDNESS
 let Camp = require('../models/camp');
 
+// let Camper = require('../models/camper');
 // // staff camper profiles
 // router.get('/staff-camper-profiles', function(req, res, next){
 //    res.render('staff-camper-profiles', { title:'Camper Profiles'});
@@ -21,11 +22,12 @@ else{
   console.log(queryResults);
   res.render('staff-camper-registration', {
     Camp: queryResults,
-    title:'Add kids to Camp'
+    title:'Add Camps'
   });
 }
   });
 });
+
 
 
 
@@ -76,6 +78,7 @@ router.post('/staff-addaday', function(req, res, next) {
       res.redirect('staff-camper-registration');
    });
 });
+
 
 // make public
 module.exports = router;
